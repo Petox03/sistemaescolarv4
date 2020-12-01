@@ -95,7 +95,7 @@ if (isset($_SESSION['user'])) {
 if (isset($_SESSION['tiempo'])) {
 
     //Tiempo en segundos para dar vida a la sesión.
-    $innactive = 1800; //20 min.
+    $innactive = 1800; //30 min.
 
     //Calculamos tiempo de vida inactivo.
     $lifeTime = time() - $_SESSION['tiempo'];

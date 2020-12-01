@@ -44,6 +44,69 @@ $app->post('/login/{user}', function (Request $request, Response $response, arra
     return $response;
 });
 
+$app->post('/singup', function (Request $request, Response $response, array $args) {
+
+    $data = json_decode($request->getBody()->getContents(), false);
+
+    $user = $data->user;
+    $pass = $data->pass;
+    $Rpass = $data->Rpass;
+    $name = $data->name;
+    $ape = $data->lastname;
+
+    $msg = new stdClass();
+
+    //Validamos que las variables no estén vacías
+    if($user == "" || $pass == "" || $Rpass == "" || $name == "" || $ape == "")
+    {
+        $msg->datos = false;
+    }
+    else
+    {
+        $msg->datos = true;
+
+        //Se validan que las contraseñas sean iguales
+        if ($pass != $Rpass)
+        {
+            $msg->passes = false;
+        }
+        else
+        {
+            $msg->passes = true;
+
+            //! Consulta si hay un user igual al que se intenta registrar
+            $users = DB::table('users')->where('user',$user)->first();
+
+            //Se comprueba si existe un user con las condiciones puestas
+            if($users)
+            {
+                $msg->userExist = true;
+            }
+            else
+            {
+                $msg->userExist = false;
+
+                //? Inserción de los datos del nuevo usuario a la base de datos
+                $usuario = DB::table('users')->insertGetId(
+                    ['user' => $user, 'pass' => $pass, 'idaccess' => '2', 'name' => $name, 'lastname' => $ape]
+                );
+
+                if($usuario)
+                {
+                    $msg->singup = true;
+                }
+                else
+                {
+                    $msg->singup = false;
+                }
+            }
+        }
+    }
+
+    $response->getBody()->write(json_encode($msg));
+    return $response;
+});
+
 $app->post('/add/{alumn}', function (Request $request, Response $response, array $args) {
 
     $data = json_decode($request->getBody()->getContents(), false);

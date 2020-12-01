@@ -4,29 +4,28 @@ if(!$loggedin)
 {
 echo'
 <body>
-    <div class="">
-        <div class="columns is-centered is-2 mt-6">
-            <div class="column is-half login animate__animated animate__fadeIn animate__slow">
-                <div class="notification is-link">
-                    <h1>Ingrese sus datos para iniciar sesión</h1>
-                </div>
-                <form action="api/index.php/login" method="POST">
-                    <span class="is-size-4 mt-3 mb-3"><h4 id="a" class=""></h4></span>
-                    <div class="field">
-                        <label class="label">User</label>
-                        <div class="control">
-                            <input class="input" type="text" id="user" name="user" placeholder="User">
-                        </div>
-                    </div>
-                    <div class="field">
-                        <label class="label">pass</label>
-                        <div class="control">
-                            <input class="input" type="password" id="pass" name="pass" placeholder="Password">
-                        </div>
-                    </div>
-                    <button type="button" class="button is-link" onclick="login()">Iniciar sesión</button>
-                </form>
+    <div class="columns is-centered is-2 mt-4">
+        <div class="column is-half login animate__animated animate__fadeIn animate__slow">
+            <div class="notification is-link">
+                <h1>Ingrese sus datos para iniciar sesión</h1>
             </div>
+            <form action="api/index.php/login" method="POST">
+                <span class="is-size-4 mt-3 mb-3"><h4 id="a" class=""></h4></span>
+                <div class="field">
+                    <label class="label">Usuario</label>
+                    <div class="control">
+                        <input class="input is-rounded" type="text" id="user" name="user" placeholder="Usuario">
+                    </div>
+                </div>
+                <div class="field">
+                    <label class="label">Contraseña</label>
+                    <div class="control">
+                        <input class="input is-rounded" type="password" id="pass" name="pass" placeholder="Contraseña">
+                    </div>
+                </div>
+                <button type="button" class="button is-link" onclick="login()">Iniciar sesión</button>
+                <a type="button" href="singup.php" class="button is-link ml-4" onclick="login()">Registrarse</a>
+            </form>
         </div>
     </div>
 
