@@ -1,3 +1,5 @@
+SE USA LA MISMA BASE DE DATOS QUE LA VERSIÓN 3
+
 Paso 1.- Exportar la base de datos y tablas para tener lo necesario y así funcione el sistema escolar, o usar setup.php(no recomendado)
 El diagrama trae consigo la cuenta de administrador y 4 cuentas más, pero el sistema registra satisfactoriamente nuevos
 usuarios al sistema.
