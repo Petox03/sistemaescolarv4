@@ -1,0 +1,13 @@
+{
+  "name": "sistemaescolarv4",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/Petox03/sistemaescolarv4.git",
+  "author": "Alberto Sosa <petox.somart@outlook.com>",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.21.0",
+    "bulma": "^0.9.1",
+    "normalize.css": "^8.0.1"
+  }
+}

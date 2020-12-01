@@ -1,0 +1,17 @@
+{
+    "name": "alberto/sistemaescolarv4",
+    "description": "proyecto de sistema escolar con slim",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Alberto Sosa",
+            "email": "petox.somart@outlook.com"
+        }
+    ],
+    "require": {
+        "illuminate/database": "^8.16",
+        "illuminate/events": "^8.16",
+        "slim/slim": "4.*",
+        "slim/psr7": "^1.2"
+    }
+}

@@ -1,0 +1,23 @@
+nav{background-color:#eee!important; height: 100px;}
+.login{background-color:#f1eeee;border-radius:10% 4% 4% 4%}
+.del{background-color:#f1eeee;border-radius:12% 4% 4% 4%}
+.padDelete{padding:10px}
+.modi{background-color:#f1eeee;border-radius:2%}
+.form{background-color:#f1eeee;border-radius:5% 5% 5% 5%}
+.error{color:#cc0d0d}
+.check{text-align:center;color:#03b603}
+.add{text-align:center;color:#03b603}
+.linkL{color:rgba(0,150,45,.925);text-decoration:none}
+.linkL:hover{color:rgba(7,197,64,.925);text-decoration:none}
+.linkdel{color:#fff;text-decoration:none}
+.linkdel:hover{color:red!important;text-decoration:none}
+.linkM{color:red;text-decoration:none}
+.linkM:hover{color:#ff820d;text-decoration:none}
+.fonttxt{color:rgba(113,236,144,.925)}
+.shadow{-webkit-box-shadow:20px 20px 15px 5px #999;-moz-box-shadow:20px 20px 15px 5px #999;filter:shadow(color=#999999, direction=135, strength=2)}
+.linknav{color:#000!important;text-decoration:none!important;font-size:1em!important}
+.linknav:hover{transition:all .3s ease!important;color:#e8bd6e!important;font-size:1.1em!important;margin-left:8px;top:0;z-index:1}
+.user{color:#006400!important}
+.container{display:flex;align-items:center;flex-direction:row}
+.center{text-align:center}
+.fondo{background-color:rgb(245, 245, 245)}

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="feeding" method="post">
+        <select id="alumn" onChange="imprimirValor()">
+            <option value="1">Hola</option>
+            <option value="2">Como</option>
+            <option value="3">Estas</option>
+            <option value="4">Amigo</option>
+            <option value="5">!</option>
+        </select>
+    </form>
+
+    <script>
+        
+window.onload = function() {
+  imprimirValor();
+}
+
+function imprimirValor(){
+  var select = document.getElementById("alumn");
+  console.log(select.value);
+}
+    </script>
+</body>
+</html>
